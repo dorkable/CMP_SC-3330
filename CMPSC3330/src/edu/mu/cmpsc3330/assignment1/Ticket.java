@@ -1,7 +1,6 @@
 package edu.mu.cmpsc3330.assignment1;
 
 public class Ticket {
-	private static int newestId = -1;
 	private final int id;
 	private Event event;
 	private TicketType ticketType;
@@ -9,7 +8,7 @@ public class Ticket {
 	private boolean canceled;
 	private boolean admitted;
 	
-	public Ticket(Event event, TicketType ticketType, String studentName) {
+	public Ticket(int id, Event event, TicketType ticketType, String studentName) {
 		if(event == null) {
 			throw new IllegalArgumentException("event cannot be null");
 		}
@@ -20,7 +19,7 @@ public class Ticket {
 			throw new IllegalArgumentException("studentName cannot be blank or null");
 		}
 		
-		this.id = ++newestId;
+		this.id = id;
 		this.event = event;
 		this.ticketType = ticketType;
 		this.studentName = studentName;
