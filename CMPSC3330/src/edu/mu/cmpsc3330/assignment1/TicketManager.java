@@ -23,7 +23,7 @@ public class TicketManager {
 	  Ticket soonToBeSlain = this.ticketBook.findById(int id);
 	  soontoBeSlain.cancel();
     
-  
+  }
   public void admitTicket(int id){
     
   }
