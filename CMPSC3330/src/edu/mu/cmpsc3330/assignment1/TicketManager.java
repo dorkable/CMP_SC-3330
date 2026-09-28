@@ -17,17 +17,16 @@ public class TicketManager {
       
     ticketBook.createTicket(counter, event, type, studentName);
     counter++;
-  }
-  /*
-    
+  } 
   public void cancelTicket(int id){
+	  private int ticketIndex = 0;
+	  Ticket soonToBeSlain = this.ticketBook.findById(int id);
+	  soontoBeSlain.cancel();
     
-  }
   
   public void admitTicket(int id){
     
   }
   
-  */
 
 }
