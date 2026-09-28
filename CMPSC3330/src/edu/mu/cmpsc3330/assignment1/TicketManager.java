@@ -19,11 +19,7 @@ public class TicketManager {
     counter++;
   }
   /*
-  private void addTicketEvent(Ticket ticket, Event event){
     
-  }
-  
-  
   public void cancelTicket(int id){
     
   }
