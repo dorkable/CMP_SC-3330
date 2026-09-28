@@ -5,10 +5,10 @@ public class Event {
 	private final String location;
 	
 	public Event(String name, String location) {
-		if(name == null || name == "") {
+		if(name == null || name.isBlank()) {
 			throw new IllegalArgumentException("name cannot be blank or null");
 		}
-		if(location == null || location == "") {
+		if(location == null || location.isBlank()) {
 			throw new IllegalArgumentException("location cannot be blank or null");
 		}
 		this.name = name;

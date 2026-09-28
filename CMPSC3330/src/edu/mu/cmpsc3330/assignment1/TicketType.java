@@ -5,7 +5,7 @@ public class TicketType {
 	private final double price;
 	
 	public TicketType(String name, double price) {
-		if(name == null || name == "") {
+		if(name == null || name.isBlank()) {
 			throw new IllegalArgumentException("name cannot be blank or null");
 		}
 		if(price < 0) {
