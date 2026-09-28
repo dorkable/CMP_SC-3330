@@ -17,6 +17,8 @@ public class Main {
 		
 		System.out.println("Event toString-- "+newEvent);
 		System.out.println("TicketType toString-- "+newTicketType);
+
+		ticket2.cancel();
 	}
 
 }
