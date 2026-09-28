@@ -9,6 +9,9 @@ public class Ticket {
 	private boolean admitted;
 	
 	public Ticket(int id, Event event, TicketType ticketType, String studentName) {
+		if(id < 0){
+			throw new IllegalArgumentException("id cannot be less than 0");
+		}
 		if(event == null) {
 			throw new IllegalArgumentException("event cannot be null");
 		}
