@@ -20,12 +20,20 @@ public class TicketManager {
   } 
   public void cancelTicket(int id){
 	  private int ticketIndex = 0;
-	  Ticket soonToBeSlain = this.ticketBook.findById(int id);
-	  soontoBeSlain.cancel();
+	  private Ticket soonToBeSlain = this.ticketBook.findById(int id);
+	  if (soonToBeSlain == null){ 				// if the ticket doesn't exist throw exception
+		  throw new IllegalArgumentException("ticket was null");
+	  }
+	  soonToBeSlain.cancel();
     
   }
   public void admitTicket(int id){
-    
+    private int ticketIndex = 0;
+	  private Ticket admittedTicket = this.ticketBook.findById(int id);
+	  if (!admittedTicket){ 				// if the ticket doesn't exist throw exception
+		  throw new IllegalArgumentException("ticket was null");
+	  }
+	  admittedTicket.admit();
   }
   
 
