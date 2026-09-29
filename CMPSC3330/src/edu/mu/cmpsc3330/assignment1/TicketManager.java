@@ -10,15 +10,15 @@ public class TicketManager {
   
   public void createTicket(Event event, TicketType type, String studentName){
     
-    // if(this.ticketBook.findById(counter) == null){
-    // 	throw new IllegalStateException("This ID is already used! Something happened");
-    // }
+    if(this.ticketBook.findById(counter) != null){
+    	throw new IllegalStateException("This ID is already used! Something happened");
+    }
       
     ticketBook.createTicket(counter, event, type, studentName);
     counter++;
   } 
   public int cancelTicket(int id){
-	  Ticket cancelledTicket = this.ticketBook.findById(int id);
+	  Ticket canceledTicket = this.ticketBook.findById(id);
 	  if (canceledTicket == null){ 				// if the ticket doesn't exist throw exception
 		  throw new IllegalArgumentException("ticket id was not found");
 	  }
@@ -26,9 +26,9 @@ public class TicketManager {
     
   }
   public int admitTicket(int id){
-	  Ticket admittedTicket = this.ticketBook.findById(int id);
+	  Ticket admittedTicket = this.ticketBook.findById(id);
 	  if (admittedTicket == null){ 				// if the ticket doesn't exist throw exception
-		  throw new IllegalArgumentException("ticket was null");
+		  throw new IllegalArgumentException("ticket id was not found");
 	  }
 	  return admittedTicket.admit();
   }
