@@ -1,11 +1,7 @@
 Made using the Eclipse IDE
 
 
-Event.java - Dimitri 
-
-TicketType - Dimitri
-
-Ticket.java - Dimitri
+Event.java, TicketType, Ticket.java - Dimitri
 
 TicketBook - Gavin
 
