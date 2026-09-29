@@ -14,7 +14,7 @@ public class TicketBook {
 	
 	public Ticket createTicket(int id, Event event, TicketType type, String studentName) {
 		if (count >= tickets.length) {
-			throw new IllegalArgumentException("Tcket is full");
+			throw new IllegalArgumentException("Ticket is full");
 		}
 		Ticket ticket = new Ticket(id, event, type, studentName);
 		tickets[count] = ticket;
