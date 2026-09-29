@@ -3,10 +3,10 @@ Github Repo: github.com/dorkable/CMP_SC-3330
 Made using the Eclipse IDE
 
 
-Event.java, TicketType, Ticket.java - Dimitri
+Event.java, TicketType, Ticket.java - Dimitri Nguyen
 
-TicketBook - Gavin
+TicketBook - Gavin Yeon
 
-TicketManager - Brooks
+TicketManager - Brooks Sonethongkham
 
-Main.java - Gavin and Brooks
+Main.java - Gavin Yeon and Brooks Sonethongkham
