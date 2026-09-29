@@ -1,7 +1,6 @@
 package edu.mu.cmpsc3330.assignment1;
 
 public class TicketManager {
-  private Ticket ticket;
   private TicketBook ticketBook;
   private int counter=1;
   
@@ -11,29 +10,27 @@ public class TicketManager {
   
   public void createTicket(Event event, TicketType type, String studentName){
     
-    if(this.ticketBook.findById(counter) != null){
-    	throw new IllegalStateException("This ID is already used! Something happened");
-    }
+    // if(this.ticketBook.findById(counter) == null){
+    // 	throw new IllegalStateException("This ID is already used! Something happened");
+    // }
       
     ticketBook.createTicket(counter, event, type, studentName);
     counter++;
   } 
-  public void cancelTicket(int id){
-	  private int ticketIndex = 0;
-	  private Ticket soonToBeSlain = this.ticketBook.findById(int id);
-	  if (soonToBeSlain == null){ 				// if the ticket doesn't exist throw exception
-		  throw new IllegalArgumentException("ticket was null");
+  public int cancelTicket(int id){
+	  Ticket cancelledTicket = this.ticketBook.findById(int id);
+	  if (canceledTicket == null){ 				// if the ticket doesn't exist throw exception
+		  throw new IllegalArgumentException("ticket id was not found");
 	  }
-	  soonToBeSlain.cancel();
+	  return canceledTicket.cancel();
     
   }
-  public void admitTicket(int id){
-    private int ticketIndex = 0;
-	  private Ticket admittedTicket = this.ticketBook.findById(int id);
-	  if (!admittedTicket){ 				// if the ticket doesn't exist throw exception
+  public int admitTicket(int id){
+	  Ticket admittedTicket = this.ticketBook.findById(int id);
+	  if (admittedTicket == null){ 				// if the ticket doesn't exist throw exception
 		  throw new IllegalArgumentException("ticket was null");
 	  }
-	  admittedTicket.admit();
+	  return admittedTicket.admit();
   }
   
 
